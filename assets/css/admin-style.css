@@ -1,0 +1,56 @@
+.mapmap_admin_wrap{
+	border: solid 1px #ccc;
+	border-top: none;
+	padding: 10px;
+	max-width: 1125px;
+}
+#mapmap_googlemap{
+	width: 50%;
+	height: 500px;
+	border: 1px solid #AAA;
+	float: left;
+	max-height: 500px;
+}
+
+#mapmap_attributes{
+	width: 45%;
+	border: solid 1px #AAA;
+	margin: 0 0 0 10px;
+	float: left;
+	padding: 5px;
+}
+
+#mapmap_attributes fieldset{
+	border: dotted 1px #AAA;
+	padding: 5px;
+	margin: 5px 5px 10px 5px;
+}
+
+#mapmap_attributes fieldset legend{
+	font-weight: bold;
+}
+
+.mapmap_icon{
+	max-width: 50px;
+	height: auto;
+	border: solid 1px #DDD;
+	cursor: pointer;
+}
+
+.mapmap_icon.selected{
+	border: solid 1px #888;
+	background: #CCC;
+}
+
+#icon_location{
+	font-style: italic;
+	padding: 5px;
+}
+
+.mapmap_row{}
+.mapmap_row:hover{
+    background-color: #DDD;
+}
+.row_odd{
+	background-color: #EEE;
+}
