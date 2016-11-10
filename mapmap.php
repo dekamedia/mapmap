@@ -44,7 +44,9 @@ class mapmap {
 		add_action( 'admin_post_mapmap_delete_shortcode', array( $this, 'admin_shortcode_delete' ) );
 		add_action( 'admin_notices', array( $this, 'admin_notice') );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue') );
-		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, '_admin_setting_link') );			
+		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, '_admin_setting_link') );	
+		//Enable shortcodes in text widgets
+		add_filter( 'widget_text','do_shortcode' );		
 	}
 	
 	public function activate(){
@@ -189,6 +191,9 @@ class mapmap {
 		//load api at every page
 		if($pages === false) return true;
 		
+		//dont load the API if not singular
+		if( !is_singular() ) return false;
+		
 		//get current postID
 		$id = get_the_ID();
 		
@@ -217,6 +222,9 @@ class mapmap {
 	 *
 	 */	
 	public function generate($atts, $content = null){
+		//do not decode the shortcode when api not loaded
+		if( !$this->_load_google_map_api() ) return;
+		
 		//get mapmap setting
 		$options = get_option('mapmap_options');
 		
