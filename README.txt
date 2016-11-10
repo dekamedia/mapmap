@@ -1,7 +1,7 @@
 === MapMap ===
 Contributors: sugiartha
 Tags: google map wizard, map shortcode, map widget, multiple maps, popup map
-Donate link: wpdeka.com/donate
+Donate link: http://wpdeka.com/donate
 Requires at least: 3.0.1
 Tested up to: 4.6.1
 Stable tag: 1.0
@@ -21,7 +21,7 @@ MapMap features:
 5. Info window title and description
 6. Auto detect zoom, map type and other Google Map settings
 7. Edit existing map configuration without editing shortcode
-7. Enable to use it as popup window (next release)
+8. Enable to use it as popup window (next release)
 
 == Installation ==
 
@@ -56,6 +56,6 @@ That is also true for other facilities like map type and marker icon.
 3. The screenshot description corresponds to screenshot-3.(png|jpg|jpeg|gif).
 
 == Changelog ==
-= 0.1 =
+= 1.0 =
 * Initial release.
 
